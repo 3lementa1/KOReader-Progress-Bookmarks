@@ -1,3 +1,5 @@
+This is a user patch for KOReader made with ChatGPT Codex. It changes the appearance of books for more realistic depictions of book length and progress.
+
 Install `2-bookshelf-progress-bookmark.lua` by copying it into `koreader/patches/` alongside the other KOReader user patches, then restart KOReader.
 
 The patch contains its own renderer and hooks Bookshelf at runtime. It does not require edits to the Bookshelf plugin or additional renderer files. Settings remain in the same top-level location in the Bookshelf menu, under Progress Bookmarks Patch Settings. Cover View and Spine View each contain an Enable Progress Bookmarks toggle, bookmark behaviour, appearance, binding-width presets, spine-text settings, pages-per-line value, and Return to Default action. Spine View additionally has an independent Enable Spine Changes toggle, so Bookshelf spine-only books can use the selected font without enabling bookmark overlays. Return to Default restores every setting and enable toggle for that view. Existing shared values act as initial fallbacks until a view-specific setting is changed. Spine-only books keep Bookshelf's native text sizing and placement; the font toggle changes their face without changing shelf spacing or title layout.
@@ -11,5 +13,3 @@ The curved page edge and page-line starts follow the raised spine's contour, sta
 ## Updating
 
 Use **Check for updates** in Progress Bookmarks Patch Settings to check the latest stable GitHub release. The updater installs only after confirmation, verifies the release version, patch filename, and Lua syntax, saves a versioned backup beside the patch, and asks you to restart KOReader.
-
-For the updater to find a release, publish a GitHub release tagged with the same version as `PATCH_VERSION` and attach the patch file as a release asset named exactly `2-bookshelf-progress-bookmark.lua`. For the first release, use tag `v1.0.0` and attach this patch file. For later releases, increment `PATCH_VERSION`, use the matching `v<version>` tag, and attach the updated patch with the same filename. Drafts and prereleases are ignored.
