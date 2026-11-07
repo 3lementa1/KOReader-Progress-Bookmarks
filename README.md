@@ -10,17 +10,43 @@ Features:
 -Adds a GitHub update checker that can install the latest stable release, after confirmation, while saving a backup.
 
 
-Install `2-bookshelf-progress-bookmark.lua` by copying it into `koreader/patches/` alongside the other KOReader user patches, then restart KOReader.
+Install `2-bookshelf-progress-bookmark.lua` by copying it from Releases on this page into `koreader/patches/`, then restart KOReader.
 
 
-Within each view, bookmark behaviour and appearance are grouped under Bookmark. Spine settings include a Spine View rendering toggle, adjustable thin/medium/thick binding widths, per-view pages-per-line control, spine text visibility and metadata, truncate-or-second-line overflow, and a font-match toggle. 
-Pages per line defaults to 200, matching the prior line density, and the line count remains capped at six. Turning off Spine View rendering hides the custom binding, page block, and spine text while leaving progress bookmarks active; spine-only books use Bookshelf's native text rendering. Spine View binding width ranges from 4.0% to 8.5%; Cover View ranges from 4.0% to 20.0%. When both title and author fit, their combined run divides the available longitudinal space into equal leading, middle, and trailing gaps. In both Cover View and face-out Spine View, multi-digit series indices rotate to follow the spine text direction, while single-digit indices remain level at the foot. Text is clipped to the binding edges; antialiased coverage and a subtle contrasting offset preserve legibility.
+This patch draws an overlay on book covers in Bookshelf with a spine showing book info, and pages over top that indicate how long the book is. It then draws a bookmark that takes the place of a classic progress bar. The bookmark sits vertically in the page that you are on, just like a real bookmark would. It also moves across horizontally like a classic progress bar so that you can still easily see how far you are in a shorter book. The length, thickness and colour of the bookmark are adjustable, and I might add functionality later to select a custom bookmark image from a png. 
+The spine is drawn by copying a section of the cover. The thickness, font and colour of the spine text is adjustable. 
+You can toggle this for Cover View and Spine View separately. Spine mode also has options for making the spine text on Spine Only books match the user-defined spine font. You can use this option to customize spine text in Spine View whether or not you use the bookmark functionality.
 
-The progress bookmark can track vertically, horizontally, or both. Horizontal movement reserves space for the full ribbon width and its curved top, so the mark stays within the page-rule or cover bounds. Bookmark thickness and each length preset have independent adjustable values per view. Initial bookmark defaults in both views follow the prior shared values: finished books return to the start at half length; unopened books are hidden; tracking is Both; colour is Default; length is Short; thickness preset is Thick (Thin 8.5%, Medium 10%, Thick 13.5%); details are on. Cover View binding defaults to 10% (Thin 8.5%, Medium 10%, Thick 13.5%); Spine View defaults to 8.5% (Thin 7%, Medium 8%, Thick 8.5%). Spine title, author, and series index are shown; overflow is truncated; text size is 7; font colour is Dark grey.
+Features:
+Spine
+Give your books a distinctive, physical-book look with customizable bindings and spine text.
+Adjustable binding widths — Choose Thin, Medium, or Thick bindings, with separate controls for Cover View and Spine View.
+Custom spine text — Display the book's title, author, and series index.
+Text customization — Adjust text size, colour, and font matching.
+Flexible title layout — Choose between truncating long titles or allowing them to wrap onto a second line.
+Series indices — Multi-digit series numbers follow the spine's orientation, while single-digit indices sit neatly at the foot.
+Page stack customization — Adjust how many pages appear on each line, with up to six lines of page detail.
+Bookmark
+Keep track of your reading with a customizable progress bookmark.
+Flexible tracking — Follow your progress vertically, horizontally, or in both directions.
+Adjustable thickness — Choose Thin, Medium, or Thick, with independent settings for each view.
+Custom lengths — Configure bookmark length presets to suit your preferred appearance.
+Colour options — Customize the bookmark's colour.
+Bookmark details — Toggle additional visual details on or off.
+View-specific settings — Cover View and Spine View can each have their own bookmark behaviour and appearance.
 
-The curved page edge and page-line starts follow the raised spine's contour, staying 4 pixels to its right at every row as spine thickness changes; a grey gutter fills that gap. Cover View keeps its original binding curve. Face-out Spine View uses an elliptical binding and matching page starts, with a straight outer edge and page rules extending to the cover's right edge. The black back-board line starts at the spine-extension/page junction and is 2 pixels tall; in Spine View its far edge is inset 2 pixels from the top page line to reinforce perspective.
+This is going to work best if you disable the icons for favourites, reading bookmark and spine mode drop shadow, with square corners, and hardcover style. My setup might also involve other settings I don't remember so YMMV and let me know if anything looks weird.
+I might add functionality later to select a custom bookmark image from a png as well.
 
-The patch contains its own renderer and hooks Bookshelf at runtime. It does not require edits to the Bookshelf plugin or additional renderer files. Settings remain in the same top-level location in the Bookshelf menu, under Progress Bookmarks Patch Settings. Cover View and Spine View each contain an Enable Progress Bookmarks toggle, bookmark behaviour, appearance, binding-width presets, spine-text settings, pages-per-line value, and Return to Default action. Spine View additionally has an independent Enable Spine Changes toggle, so Bookshelf spine-only books can use the selected font without enabling bookmark overlays. Return to Default restores every setting and enable toggle for that view. Existing shared values act as initial fallbacks until a view-specific setting is changed. Spine-only books keep Bookshelf's native text sizing and placement; the font toggle changes their face without changing shelf spacing or title layout.
+I started working on this idea this Spring when I was editing other people's code line-by-line with ChatGPT and having to do manual updates to several plugin files every time there was an update. This Fall I was given a (still very old) computer that can actually run Codex and I've been able to (get AI to) turn it into a proper patch, so now I am sharing it in case anyone else is interested. I only use Bookshelf now so this is Bookshelf-exclusive at the moment, but I can share the old Project:Title patch and could probably port to SimpleUI and ZenOS if there is interest. Obviously this is all open-source too so feel free to play around with it.
+
+I made the original version for Project:Title which I really loved for the idea of progress bars that are different sizes depending on the size of the book. Project:Title by u/joshua-cant ( https://github.com/joshuacant/ProjectTitle )
+This was originally based on the RealBooks patch by u/ReaLx3m which made realistic visual book length a reality and made me want to take progress bars into this visual language ( https://www.reddit.com/r/koreader/comments/1sswzgo/real_books_for_koreader_with_visual_page_count/ ). 
+Bookshelf is my current favourite UI done by u/AndyHazz. This really brought the real book feeling home for me by making it feel like I can skim through my library, peek at the back of some books, and now even sort them into box sets. ( https://www.reddit.com/r/koreader/comments/1xn8y0q/bookshelf_63x_date_night/ ) 
+Thank you to all these developers and thank you to all the developers of KOReader, which has helped me read more and been very fun to work with.
+I just made this for myself and I've never uploaded anything to Github before so please let me know if you have any requests or suggestions.
+
+
 
 ## Updating
 
