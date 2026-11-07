@@ -1,4 +1,4 @@
-This is a user patch for KOReader made with ChatGPT Codex. It changes the appearance of books for more realistic depictions of book length and progress.
+This is a user patch for KOReader made with ChatGPT Codex. It changes the appearance of books in the Bookshelf plugin for more realistic depictions of book length and progress, and adds spines that include customizable book details.
 
 <img width="356" height="481" alt="Cover View small_2026-11-06_113711" src="https://github.com/user-attachments/assets/c1beddd5-0bed-4ca1-86ad-6da19897de08" /> <img width="356" height="481" alt="Spine View large_Screenshot_2026-11-06_144414" src="https://github.com/user-attachments/assets/81372ff9-31de-4df9-96a4-12bb9553caea" />
 
