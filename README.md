@@ -22,23 +22,23 @@ You can toggle this for Cover View and Spine View separately. Spine mode also ha
 Features:
 Spine
 
-Give your books a distinctive, physical-book look with customizable bindings and spine text.
-Adjustable binding widths — Choose Thin, Medium, or Thick bindings, with separate controls for Cover View and Spine View.
-Custom spine text — Display the book's title, author, and series index.
-Text customization — Adjust text size, colour, and font matching.
-Flexible title layout — Choose between truncating long titles or allowing them to wrap onto a second line.
-Series indices — Multi-digit series numbers follow the spine's orientation, while single-digit indices sit neatly at the foot.
-Page stack customization — Adjust how many pages appear on each line, with up to six lines of page detail.
+-Give your books a distinctive, physical-book look with customizable bindings and spine text.
+-Adjustable binding widths — Choose Thin, Medium, or Thick bindings, with separate controls for Cover View and Spine View.
+-Custom spine text — Display the book's title, author, and series index.
+-Text customization — Adjust text size, colour, and font matching.
+-Flexible title layout — Choose between truncating long titles or allowing them to wrap onto a second line.
+-Series indices — Multi-digit series numbers follow the spine's orientation, while single-digit indices sit neatly at the foot.
+-Page stack customization — Adjust how many pages appear on each line, with up to six lines of page detail.
 
 Bookmark
 
-Keep track of your reading with a customizable progress bookmark.
-Flexible tracking — Follow your progress vertically, horizontally, or in both directions.
-Adjustable thickness — Choose Thin, Medium, or Thick, with independent settings for each view.
-Custom lengths — Configure bookmark length presets to suit your preferred appearance.
-Colour options — Customize the bookmark's colour.
-Bookmark details — Toggle additional visual details on or off.
-View-specific settings — Cover View and Spine View can each have their own bookmark behaviour and appearance.
+-Keep track of your reading with a customizable progress bookmark.
+-Flexible tracking — Follow your progress vertically, horizontally, or in both directions.
+-Adjustable thickness — Choose Thin, Medium, or Thick, with independent settings for each view.
+-Custom lengths — Configure bookmark length presets to suit your preferred appearance.
+-Colour options — Customize the bookmark's colour.
+-Bookmark details — Toggle additional visual details on or off.
+-View-specific settings — Cover View and Spine View can each have their own bookmark behaviour and appearance.
 
 Notes:
 This is going to work best if you disable the icons for favourites, reading bookmark and spine mode drop shadow, with square corners, and hardcover style. My setup might also involve other settings I don't remember so YMMV and let me know if anything looks weird.
