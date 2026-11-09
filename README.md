@@ -2,58 +2,96 @@ This is a user patch for KOReader made with ChatGPT Codex. It changes the appear
 
 <img width="356" height="481" alt="Cover View small_2026-11-06_113711" src="https://github.com/user-attachments/assets/c1beddd5-0bed-4ca1-86ad-6da19897de08" /> <img width="356" height="481" alt="Spine View large_Screenshot_2026-11-06_144414" src="https://github.com/user-attachments/assets/81372ff9-31de-4df9-96a4-12bb9553caea" />
 
-Features:
+# BookCraft — Progress Bookmarks for KOReader Bookshelf
 
--Adds reading-progress bookmarks to Bookshelf’s Cover View and face-out Spine View.
--Tracks progress vertically, horizontally, or both, with controls for bookmark visibility, position, length, thickness, colour, and detail.
--Adds adjustable page-line count and binding/spine rendering options.
--Customizes what is included in spine text, including title, author, and series index display, font, size, colour, and overflow options.
--Includes Cover View and Spine View settings, with independent enable toggles and default-reset options.
--Adds a GitHub update checker that can install the latest stable release, after confirmation, while saving a backup.
+## Features
 
+- Adds reading-progress bookmarks to Bookshelf’s Cover View and face-out Spine View.
+- Tracks progress vertically, horizontally, or both, with controls for bookmark visibility, position, length, thickness, colour, and detail.
+- Adds adjustable page-line count and binding/spine rendering options.
+- Customizes spine text, including title, author, and series index display, font, size, colour, and overflow options.
+- Includes separate Cover View and Spine View settings, with independent enable toggles and default-reset options.
+- Includes a GitHub update checker that can install the latest stable release after confirmation, while saving a backup.
 
-Install `2-bookshelf-progress-bookmark.lua` by copying it from Releases on this page into `koreader/patches/`, then restart KOReader.
+## Installation
 
+Download `2-bookshelf-progress-bookmark.lua` from the **Releases** section of this repository and copy it into:
 
-This patch draws an overlay on book covers in Bookshelf with a spine showing book info, and pages over top that indicate how long the book is. It then draws a bookmark that takes the place of a classic progress bar. The bookmark sits vertically in the page that you are on, just like a real bookmark would. It also moves across horizontally like a classic progress bar so that you can still easily see how far you are in a shorter book. The length, thickness and colour of the bookmark are adjustable, and I might add functionality later to select a custom bookmark image from a png. 
-The spine is drawn by copying a section of the cover. The thickness, font and colour of the spine text is adjustable. 
-You can toggle this for Cover View and Spine View separately. Spine mode also has options for making the spine text on Spine Only books match the user-defined spine font. You can use this option to customize spine text in Spine View whether or not you use the bookmark functionality.
+`koreader/patches/`
 
-Features:
-Spine
+Restart KOReader to apply the patch.
 
--Give your books a distinctive, physical-book look with customizable bindings and spine text.
--Adjustable binding widths — Choose Thin, Medium, or Thick bindings, with separate controls for Cover View and Spine View.
--Custom spine text — Display the book's title, author, and series index.
--Text customization — Adjust text size, colour, and font matching.
--Flexible title layout — Choose between truncating long titles or allowing them to wrap onto a second line.
--Series indices — Multi-digit series numbers follow the spine's orientation, while single-digit indices sit neatly at the foot.
--Page stack customization — Adjust how many pages appear on each line, with up to six lines of page detail.
+## About
 
-Bookmark
+BookCraft draws a physical-book-inspired overlay on book covers in Bookshelf, complete with a spine displaying book information and a page stack that reflects the book's length.
 
--Keep track of your reading with a customizable progress bookmark.
--Flexible tracking — Follow your progress vertically, horizontally, or in both directions.
--Adjustable thickness — Choose Thin, Medium, or Thick, with independent settings for each view.
--Custom lengths — Configure bookmark length presets to suit your preferred appearance.
--Colour options — Customize the bookmark's colour.
--Bookmark details — Toggle additional visual details on or off.
--View-specific settings — Cover View and Spine View can each have their own bookmark behaviour and appearance.
+Instead of a traditional progress bar, BookCraft uses a bookmark that sits vertically within the pages, just like a real bookmark. It also moves horizontally, retaining the familiar visual indication of reading progress and making it easy to see how far along you are in shorter books.
 
-Notes:
-This is going to work best if you disable the icons for favourites, reading bookmark and spine mode drop shadow, with square corners, and hardcover style. My setup might also involve other settings I don't remember so YMMV and let me know if anything looks weird.
-I might add functionality later to select a custom bookmark image from a png as well.
+The bookmark's length, thickness, and colour are adjustable.
 
-Development:
-I started working on this idea this Spring when I was editing other people's code line-by-line with ChatGPT and having to do manual updates to several plugin files every time there was an update. This Fall I was given a (still very old) computer that can actually run Codex and I've been able to (get AI to) turn it into a proper patch, so now I am sharing it in case anyone else is interested. I only use Bookshelf now so this is Bookshelf-exclusive at the moment, but I can share the old Project:Title patch and could probably port to SimpleUI and ZenOS if there is interest. Obviously this is all open-source too so feel free to play around with it.
+The spine is created by copying a section of the cover, giving each book a binding that feels connected to its original artwork. Spine thickness, text font, and colour are customizable.
 
+Cover View and Spine View can be configured independently. Spine View also includes options for customizing the text on Spine Only books, allowing you to use your preferred spine font whether or not you enable the bookmark functionality.
 
-I made the original version for Project:Title which I really loved for the idea of progress bars that are different sizes depending on the size of the book. Project:Title by u/joshua-cant ( https://github.com/joshuacant/ProjectTitle )
-This was originally based on the RealBooks patch by u/ReaLx3m which made realistic visual book length a reality and made me want to take progress bars into this visual language ( https://www.reddit.com/r/koreader/comments/1sswzgo/real_books_for_koreader_with_visual_page_count/ ). 
-Bookshelf is my current favourite UI done by u/AndyHazz. This really brought the real book feeling home for me by making it feel like I can skim through my library, peek at the back of some books, and now even sort them into box sets. ( https://www.reddit.com/r/koreader/comments/1xn8y0q/bookshelf_63x_date_night/ ) 
+## Spine
 
+Give your books a distinctive, physical-book look with customizable bindings and spine text.
 
-Thank you to all these developers and thank you to all the developers of KOReader, which has helped me read more and been very fun to work with.
+- **Adjustable binding widths** — Choose Thin, Medium, or Thick bindings, with separate controls for Cover View and Spine View.
+- **Custom spine text** — Display the book's title, author, and series index.
+- **Text customization** — Adjust text size, colour, and font matching.
+- **Flexible title layout** — Choose between truncating long titles or allowing them to wrap onto a second line.
+- **Series indices** — Multi-digit series numbers follow the spine's orientation, while single-digit indices sit neatly at the foot.
+- **Page stack customization** — Adjust how many pages appear on each line, with up to six lines of page detail.
+
+## Bookmark
+
+Keep track of your reading with a customizable progress bookmark.
+
+- **Flexible tracking** — Follow your progress vertically, horizontally, or in both directions.
+- **Adjustable thickness** — Choose Thin, Medium, or Thick, with independent settings for each view.
+- **Custom lengths** — Configure bookmark length presets to suit your preferred appearance.
+- **Colour options** — Customize the bookmark's colour.
+- **Bookmark details** — Toggle additional visual details on or off.
+- **View-specific settings** — Cover View and Spine View can each have their own bookmark behaviour and appearance.
+
+## Recommended Settings
+
+BookCraft seems to work best with the following Bookshelf settings:
+
+- Disable the icons for Favourites and Reading Bookmark.
+- Disable the Spine Mode drop shadow.
+- Use square corners.
+- Use Hardcover style.
+
+My setup might also involve other settings I've forgotten, so your mileage may vary. Let me know if anything looks weird!
+
+## Development
+
+I started working on this idea in the Spring, editing other people's code line-by-line with ChatGPT and having to manually update several plugin files every time there was an update.
+
+This Fall, I was given a (still very old) computer that could actually run Codex. With a little help from AI, I was finally able to turn the idea into a proper patch, so I'm sharing it in case anyone else is interested.
+
+I currently use Bookshelf exclusively, so BookCraft is Bookshelf-only for now. I can share the old Project:Title patch, and could probably port it to SimpleUI and ZenOS if there's interest.
+
+Everything is open-source, so feel free to experiment, modify, and make it your own!
+
+## Acknowledgements
+
+I originally made this for **Project:Title**, which I really loved for its idea of progress bars that vary in size depending on the length of the book.
+
+[Project:Title by u/joshua-cant](https://github.com/joshuacant/ProjectTitle)
+
+This patch was originally inspired by the **RealBooks** patch by u/ReaLx3m, which made realistic visual page counts a reality and got me thinking about bringing progress bars into the same visual language.
+
+[RealBooks for KOReader](https://www.reddit.com/r/koreader/comments/1sswzgo/real_books_for_koreader_with_visual_page_count/)
+
+**Bookshelf**, by u/AndyHazz, is my current favourite KOReader UI. It really brings the physical-book feeling home: I can skim through my library, peek at the backs of books, and now even sort them into box sets.
+
+[Bookshelf 6.3.x — Date Night](https://www.reddit.com/r/koreader/comments/1xn8y0q/bookshelf_63x_date_night/)
+
+Thank you to these developers, and to all the developers of KOReader. KOReader has helped me read more and has been a lot of fun to work with.
+
 
 I just made this for myself and I've never uploaded anything to Github before so please let me know if you have any requests or suggestions.
 
