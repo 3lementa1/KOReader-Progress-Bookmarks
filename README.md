@@ -1,8 +1,11 @@
 This is a user patch for KOReader made with ChatGPT Codex. It changes the appearance of books in the Bookshelf plugin for more realistic depictions of book length and progress, and adds spines that include customizable book details.
 
+
 <img width="356" height="481" alt="Cover View small_2026-11-06_113711" src="https://github.com/user-attachments/assets/c1beddd5-0bed-4ca1-86ad-6da19897de08" /> <img width="356" height="481" alt="Spine View large_Screenshot_2026-11-06_144414" src="https://github.com/user-attachments/assets/81372ff9-31de-4df9-96a4-12bb9553caea" />
 
-# BookCraft — Progress Bookmarks for KOReader Bookshelf
+<img width="356" height="481" alt="Cover_view_large__2026-11-11_212200" src="https://github.com/user-attachments/assets/63d449d5-9212-44b1-a4cf-337c2c54f1b4" /> <img width="356" height="481" alt="Covers_critters_2026-11-11_221629" src="https://github.com/user-attachments/assets/308f7914-6fda-4f68-ac47-7543d8ce0d54" />
+
+# Progress Bookmarks for KOReader Bookshelf
 
 ## Features
 
@@ -11,6 +14,9 @@ This is a user patch for KOReader made with ChatGPT Codex. It changes the appear
 - Adds adjustable page-line count and binding/spine rendering options.
 - Customizes spine text, including title, author, and series index display, font, size, colour, and overflow options.
 - Includes separate Cover View and Spine View settings, with independent enable toggles and default-reset options.
+- V1.1 brings image-based bookmarks with selectable bookmark material and charm, plus critters that climb them when certain conditions are met (user-definable).
+- Long-pressing on a book allows you to set a custom bookmark or critter for that book regardless of global settings.
+- Readme files in bookmark_images folder show how users can create their own bookmark and critter images and install to custom folders.
 - Includes a GitHub update checker that can install the latest stable release after confirmation, while saving a backup.
 
 ## Installation
@@ -19,13 +25,17 @@ Download `2-bookshelf-progress-bookmark.lua` from the **Releases** section of th
 
 `koreader/patches/`
 
+Download `bookmark_images` directory from the **Releases** section of this repository and copy it into:
+
+`koreader/`
+
 Restart KOReader to apply the patch.
 
 ## About
 
-BookCraft draws a physical-book-inspired overlay on book covers in Bookshelf, complete with a spine displaying book information and a page stack that reflects the book's length.
+Progress Bookmarks draws a physical-book-inspired overlay on book covers in Bookshelf, complete with a spine displaying book information and a page stack that reflects the book's length.
 
-Instead of a traditional progress bar, BookCraft uses a bookmark that sits vertically within the pages, just like a real bookmark. It also moves horizontally, retaining the familiar visual indication of reading progress and making it easy to see how far along you are in shorter books.
+Instead of a traditional progress bar, Progress Bookmarks uses a bookmark that sits vertically within the pages, just like a real bookmark. It also moves horizontally, retaining the familiar visual indication of reading progress and making it easy to see how far along you are in shorter books.
 
 The bookmark's length, thickness, and colour are adjustable.
 
@@ -51,13 +61,13 @@ Keep track of your reading with a customizable progress bookmark.
 - **Flexible tracking** — Follow your progress vertically, horizontally, or in both directions.
 - **Adjustable thickness** — Choose Thin, Medium, or Thick, with independent settings for each view.
 - **Custom lengths** — Configure bookmark length presets to suit your preferred appearance.
-- **Colour options** — Customize the bookmark's colour.
+- **Style options** — Customize the bookmark's colour, pattern, charm and critter
 - **Bookmark details** — Toggle additional visual details on or off.
 - **View-specific settings** — Cover View and Spine View can each have their own bookmark behaviour and appearance.
 
 ## Recommended Settings
 
-BookCraft seems to work best with the following Bookshelf settings:
+Progress bookmarks seems to work best with the following Bookshelf settings:
 
 - Disable the icons for Favourites and Reading Bookmark.
 - Disable the Spine Mode drop shadow.
@@ -84,11 +94,11 @@ I originally made this for **Project:Title**, which I really loved for its idea 
 
 This patch was originally inspired by the **RealBooks** patch by u/ReaLx3m, which made realistic visual page counts a reality and got me thinking about bringing progress bars into the same visual language.
 
-[RealBooks for KOReader](https://www.reddit.com/r/koreader/comments/1sswzgo/real_books_for_koreader_with_visual_page_count/)
+[RealBooks for KOReader](https://github.com/ReaLx3m/KOReader-AI-Slop-User-Patches/tree/main)
 
 **Bookshelf**, by u/AndyHazz, is my current favourite KOReader UI. It really brings the physical-book feeling home: I can skim through my library, peek at the backs of books, and now even sort them into box sets.
 
-[Bookshelf 6.3.x — Date Night](https://www.reddit.com/r/koreader/comments/1xn8y0q/bookshelf_63x_date_night/)
+[Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin)
 
 Thank you to these developers, and to all the developers of KOReader. KOReader has helped me read more and has been a lot of fun to work with.
 
